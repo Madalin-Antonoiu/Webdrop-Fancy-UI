@@ -120,7 +120,8 @@ nav #rest_of_it i {
 nav #left_part i {
   padding: 12px;
   font-size: 22px;
-  margin-left: 10px;
+  margin-left: 15px;
+  display: inline-block;
   color: orange;
 }
 
@@ -183,4 +184,11 @@ ul li ul li a:hover {
 
 #sidebar_menu li a span {
   margin-left: 15px;
+}
+
+.hide_minimenu{
+  position: absolute;
+  bottom:20px;
+  font-size: 20px;
+  left: 50px;
 }
