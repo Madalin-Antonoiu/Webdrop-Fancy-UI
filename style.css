@@ -11,25 +11,48 @@ body {
   background: orange;
 }
 
+nav {
+  height: 5%;
+  width: 100%;
+  background: #3C8DBC;
+  position: absolute;
+  /*Floats over first 5%vh of column1*/
+  right: 0;
+  color: white;
+}
+
+nav i {
+  float: right;
+  padding: 6px;
+}
+
 .row {
   display: flex;
 }
 
-.column1 {
+#column1 {
   height: 100vh;
   width: 13%;
-  min-width: 9.5em;
+  min-width: 11.5em;
+  /*Just so, when condensed, and resize windo, doesn't go nuts*/
   outline: 2px solid green;
   outline-offset: -2px;
   color: white;
   margin-top: 0;
   padding-top: 0;
   padding: 5px;
+  white-space: nowrap;
+  /*Text goes out of div*/
+  overflow-y: auto;
+  overflow-x: hidden;
+  /*Vertical scrollbar - only if items go out of vh*/
+  /*Horizontal scroll - never */
 }
 
-.column2 {
+#column2 {
 
-  height: 100vh;
+  height: 95vh;
+  transform: translateY(5%);
   width: 74%;
   min-width: 9.5em;
   outline: 2px solid orange;
@@ -40,9 +63,9 @@ body {
   padding: 5px;
 }
 
-.column3 {
-
-  height: 100vh;
+#column3 {
+  height: 95vh;
+  transform: translateY(5%);
   width: 13%;
   min-width: 9.5em;
   outline: 2px solid brown;
