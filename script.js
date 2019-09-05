@@ -1,4 +1,8 @@
-//To Do - increase z-index on hover
+//Selects ALL ul inside sub-menu and start them as hidden by default
+document.querySelectorAll(".sub-menu ul").forEach(function(el) {
+  el.style.display = 'none'
+});
+
 
 //Mini-Drawer
 function columnOne() {
@@ -14,5 +18,10 @@ function columnOne() {
 
   nav1.classList.toggle('column1_contract');
   nav2.classList.toggle('column2_extend');
-  logotext.classList.toggle('displayNone');
+  logotext.classList.toggle('displayNone'); //Logo text hidden
+
+  //For ul
+  
+
+
 }
