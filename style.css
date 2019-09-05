@@ -64,23 +64,23 @@ body {
 .column1_mini {
   width: 5% !important;
   min-width: 4em !important;
-  transition: all 1s;
+  transition: all 0.75s;
 }
 
 .column2_expand {
   width: 82% !important;
-  transition: all 1s;
+  transition: all 0.75s;
 }
 
 .column1_contract {
   width: 5% !important;
   min-width: 4em !important;
-  transition: all 1s;
+  transition: all 0.75s;
 }
 
 .column2_extend {
   width: 95% !important;
-  transition: all 1s;
+  transition: all 0.75s;
 }
 
 nav {
@@ -139,17 +139,19 @@ nav #left_part span {
 ul {
 	list-style: none;
 	margin: 0;
-	padding: 0;
+  padding: 0;
+ 
 }
 ul li {
   /* Sub Menu */
+ 
 }
 ul li a {
 	display: block;
-	background: #ebebeb;
+  background: #222D32;
   padding: 10px 15px;
   font-size: 20px;
-	color: #333;
+	color: whitesmoke;
 	text-decoration: none;
 	-webkit-transition: 0.2s linear;
 	-moz-transition: 0.2s linear;
@@ -158,8 +160,8 @@ ul li a {
 	transition: 0.2s linear;
 }
 ul li a:hover {
-	background: #f8f8f8;
-	color: #515151;
+	background: #1E282C;
+	color: white;
 }
 ul li a .fa {
 	width: 16px;
@@ -172,13 +174,15 @@ ul li a .fa {
 ul ul {
 	background-color:#ebebeb;
 }
+
+/*Submenu CSS */
 ul li ul li a {
-	background: #f8f8f8;
+	background: #2C3B41;
 	border-left: 4px solid transparent;
 	padding: 10px 20px;
 }
 ul li ul li a:hover {
-	background: #ebebeb;
+	
 	border-left: 4px solid #3498db;
 }
 
@@ -191,4 +195,12 @@ ul li ul li a:hover {
   bottom:20px;
   font-size: 20px;
   left: 50px;
+}
+
+.show {
+  display: block;
+}
+
+.active{
+  background: #1E282C;
 }

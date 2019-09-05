@@ -4,6 +4,26 @@ logotext = document.getElementById('logotext');
 nav1 = document.getElementById('left_part');
 nav2 = document.getElementById('rest_of_it');
 
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+//don't need any css :)
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+// w3school - https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav_dropdown
+
+
+
 //Selects ALL ul inside sub-menu and start them as hidden by default
 document.querySelectorAll(".sub-menu ul").forEach(function(el) {
   el.style.display = 'none'
@@ -14,7 +34,7 @@ document.querySelectorAll(".sub-menu ul").forEach(function(el) {
 
 
 function dropDown(e){
-  e.target.classList.toggle('displayNone');
+  e.target.classList.toggle("show");
 }
 
 //Doesn't work when in mini-state, needs some tweaking, in normal, works!
@@ -54,6 +74,7 @@ function columnOne() {
   });
 
   //Hides all submenus
+  //Known bug- Doesn't remove .active class
   document.querySelectorAll(".sub-menu ul").forEach(function(el) {
     el.style.display = 'none'
   });
