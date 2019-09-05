@@ -11,27 +11,12 @@ body {
   background: orange;
 }
 
-nav {
-  height: 5%;
-  width: 100%;
-  background: #3C8DBC;
-  position: absolute;
-  /*Floats over first 5%vh of column1*/
-  right: 0;
-  color: white;
-}
-
-nav i {
-  float: right;
-  padding: 6px;
-}
-
 .row {
   display: flex;
 }
 
 #column1 {
-  height: 100vh;
+  height: 95vh;
   width: 13%;
   min-width: 11.5em;
   /*Just so, when condensed, and resize windo, doesn't go nuts*/
@@ -50,9 +35,8 @@ nav i {
 }
 
 #column2 {
-
   height: 95vh;
-  transform: translateY(5%);
+
   width: 74%;
   min-width: 9.5em;
   outline: 2px solid orange;
@@ -65,7 +49,7 @@ nav i {
 
 #column3 {
   height: 95vh;
-  transform: translateY(5%);
+
   width: 13%;
   min-width: 9.5em;
   outline: 2px solid brown;
@@ -74,4 +58,74 @@ nav i {
   margin-top: 0;
   padding-top: 0;
   padding: 5px;
+}
+
+.column1_mini {
+  width: 5% !important;
+  min-width: 4em !important;
+  transition: all 1s;
+}
+
+.column2_expand {
+  width: 82% !important;
+  transition: all 1s;
+}
+
+.column1_contract {
+  width: 5% !important;
+  min-width: 4em !important;
+  transition: all 1s;
+}
+
+.column2_extend {
+  width: 95% !important;
+  transition: all 1s;
+}
+
+nav {
+  height: 5vh;
+  width: 100%;
+  background: #3c8dbc;
+
+  /*Floats over first 5%vh of column1*/
+  display: flex;
+  color: white;
+}
+
+nav #left_part {
+  width: 13%;
+  min-width: 11.5em;
+  height: 5vh;
+  outline: 2px solid lime;
+  outline-offset: -2px;
+  float: left;
+}
+
+nav #rest_of_it {
+  float: left;
+  outline: 2px solid darkred;
+  outline-offset: -2px;
+  width: 87%;
+  min-width: 9.5em;
+  z-index: 1;
+  background: red;
+  height: 5vh;
+}
+
+nav #rest_of_it i {
+  padding: 5px;
+}
+
+nav #left_part i {
+  padding: 5px;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+nav #left_part span {
+  margin-left: 10px;
+}
+
+.displayNone {
+  display: none;
 }

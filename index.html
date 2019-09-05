@@ -1,87 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Webdrop - Fancy 3 Column UI</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Webdrop - Fancy 3 Column UI</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
-</head>
+  <body>
+    <nav>
+      <div id="left_part">
+        <i class="fas fa-tint"><span id="logotext">Webdrop</span></i>
+      </div>
 
-<body>
-  <nav>
-    <i onclick="columnOne()" class="fas fa-bars"></i>
-  </nav>
-  <div class="row">
+      <div id="rest_of_it">
+        <i onclick="columnOne()" class="fas fa-bars"></i>
+      </div>
+    </nav>
 
-    <div id="column1" style="background-color:#aaa;">
+    <div class="row">
+      <div id="column1" style="background-color:#aaa;">
+        <ul style="list-style: none;">
+          <li><i class="fab fa-windows"></i></li>
+          <li><i class="fab fa-windows"></i></li>
+          <li><i class="fab fa-windows"></i></li>
+          <li><i class="fab fa-windows"></i></li>
+          <li><i class="fab fa-windows"></i></li>
+          <li><i class="fab fa-windows"></i></li>
+          <li><i class="fab fa-windows"></i></li>
+          <li><i class="fab fa-windows"></i></li>
+          <li><i class="fab fa-windows"></i></li>
+          <li><i class="fab fa-windows"></i></li>
+          <li><i class="fab fa-windows"></i></li>
+          <li><i class="fab fa-windows"></i></li>
+          <li><i class="fab fa-windows"></i></li>
+          <li><i class="fab fa-windows"></i></li>
+          <li><i class="fab fa-windows"></i></li>
+          <li><i class="fab fa-windows"></i></li>
+          <li><i class="fab fa-windows"></i></li>
+          <li><i class="fab fa-windows"></i></li>
+          <li><i class="fab fa-windows"></i></li>
+        </ul>
+      </div>
 
-      <ul style="list-style:none; padding:15px;">
-        <li>
-          <p><i class="fab fa-windows"></i>Some text more mo..</p>
-        </li>
-        <li>
-          <p><i class="fab fa-windows"></i>Some text more mo..</p>
-        </li>
-        <li>
-          <p><i class="fab fa-windows"></i>Some text more mo..</p>
-        </li>
-        <li>
-          <p><i class="fab fa-windows"></i>Some text more mo..</p>
-        </li>
-        <li>
-          <p><i class="fab fa-windows"></i>Some text more mo..</p>
-        </li>
-        <li>
-          <p><i class="fab fa-windows"></i>Some text more mo..</p>
-        </li>
-        <li>
-          <p><i class="fab fa-windows"></i>Some text more mo..</p>
-        </li>
-        <li>
-          <p><i class="fab fa-windows"></i>Some text more mo..</p>
-        </li>
-        <li>
-          <p><i class="fab fa-windows"></i>Some text more mo..</p>
-        </li>
-        <li>
-          <p><i class="fab fa-windows"></i>Some text more mo..</p>
-        </li>
-        <li>
-          <p><i class="fab fa-windows"></i>Some text more mo..</p>
-        </li>
-        <li>
-          <p><i class="fab fa-windows"></i>Some text more mo..</p>
-        </li>
-        <li>
-          <p><i class="fab fa-windows"></i>Some text more mo..</p>
-        </li>
-        <li>
-          <p><i class="fab fa-windows"></i>Some text more mo..</p>
-        </li>
-        <li>
-          <p><i class="fab fa-windows"></i>Some text more mo..</p>
-        </li>
-      </ul>
+      <div id="column2" style="background-color:#bbb;">
+        <h2 style="margin-top:0;">Column 2</h2>
+        <p>Other smthing...</p>
+      </div>
 
-
+      <div id="column3" style="background-color:#ccc;">
+        <h2 style="margin-top:0;">Column 3</h2>
+        <p>Some text..</p>
+      </div>
     </div>
 
-    <div id="column2" style="background-color:#bbb;">
-      <h2 style="margin-top:0;">Column 2</h2>
-      <p>Other smthing...</p>
-    </div>
-
-    <div id="column3" style="background-color:#ccc;">
-      <h2 style="margin-top:0;">Column 3</h2>
-      <p>Some text..</p>
-    </div>
-
-  </div>
-
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
