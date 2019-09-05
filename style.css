@@ -45,6 +45,7 @@ body {
   margin-top: 0;
   padding-top: 0;
   padding: 5px;
+  z-index: 2; /* }{}{*/
 }
 
 #column3 {
@@ -143,7 +144,8 @@ ul li {
 ul li a {
 	display: block;
 	background: #ebebeb;
-	padding: 10px 15px;
+  padding: 10px 15px;
+  font-size: 20px;
 	color: #333;
 	text-decoration: none;
 	-webkit-transition: 0.2s linear;
@@ -159,8 +161,10 @@ ul li a:hover {
 ul li a .fa {
 	width: 16px;
 	text-align: center;
-	margin-right: 5px;
-	float:right;
+  margin-right: 5px;
+  /* pos absolute and z-index*/
+  z-index: 1;
+  position: absolute;
 }
 ul ul {
 	background-color:#ebebeb;

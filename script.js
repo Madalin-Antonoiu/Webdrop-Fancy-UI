@@ -4,6 +4,16 @@ document.querySelectorAll(".sub-menu ul").forEach(function(el) {
 });
 
 
+
+/* 
+var sidemenu = document.getElementById('sidebar_menu');
+
+sidemenu.addEventListener('click', clickMe, false);
+
+function clickMe (e) {
+  e.target.classList.display= 'block';
+} */
+
 //Mini-Drawer
 function columnOne() {
   col1 = document.getElementById('column1');
@@ -21,7 +31,10 @@ function columnOne() {
   logotext.classList.toggle('displayNone'); //Logo text hidden
 
   //For ul
-  
+  document.querySelectorAll(".sub-menu ul").forEach(function(el) {
+    el.style.display = 'block'
+  });
 
 
 }
+
