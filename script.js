@@ -3,6 +3,8 @@ document.querySelectorAll(".sub-menu ul").forEach(function(el) {
   el.style.display = 'none'
 });
 
+//1. Click a to show respective list
+//2. Hover a in mini state to make them hover :)
 
 
 /* 
@@ -30,9 +32,15 @@ function columnOne() {
   nav2.classList.toggle('column2_extend');
   logotext.classList.toggle('displayNone'); //Logo text hidden
 
-  //For ul
-  document.querySelectorAll(".sub-menu ul").forEach(function(el) {
-    el.style.display = 'block'
+  //Opens all dropdowns
+  //document.querySelectorAll(".sub-menu ul").forEach(function(el) {
+    //el.style.display = 'block'
+  //});
+
+  //Hides all text
+  document.querySelectorAll("#sidebar_menu li a span").forEach(function(el) {
+    el.classList.toggle('displayNone'); 
+   
   });
 
 
