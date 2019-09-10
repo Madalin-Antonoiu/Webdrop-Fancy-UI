@@ -20,18 +20,18 @@ body {
   width: 10%;
   min-width: 11.5em;
   /*Just so, when condensed, and resize windo, doesn't go nuts*/
-  outline: 2px solid green;
+  outline: 2px solid green; 
   outline-offset: -2px;
   color: white;
   margin-top: 0;
   padding-top: 0;
-  padding: 5px;
   white-space: nowrap;
   /*Text goes out of div*/
   overflow-y: auto;
   overflow-x: hidden;
   /*Vertical scrollbar - only if items go out of vh*/
   /*Horizontal scroll - never */
+ 
 }
 
 #column2 {
@@ -60,6 +60,7 @@ body {
 }
 
 .column1_mini {
+  display: block !important;
   width: 3% !important;
   min-width: 4em !important;
   transition: all 0.75s;
@@ -88,6 +89,7 @@ nav {
 }
 
 nav #left_part {
+  display: block !important;
   width: 10%;
   min-width: 11.5em;
   height: 5vh;
@@ -129,87 +131,141 @@ nav #left_part span {
 }
 
 
+
 /*Lista din col1 */
+
+/*1. Incepe cu mini-listele inchise*/
+.sub-menu ul {
+  display: none;
+}
+
+.dropdown {
+  display: inline-block;
+  width: 100%;
+  background: #222D32;
+
+}
+
+
+.dd-button {
+  border: 1px solid gray;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 20px;
+	color: #d2d6de;
+}
+
+.dd-button span {
+  margin-left: 15px;
+}
+
+
+/*Arrows 
+.dd-button:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+}
+*/
+
+.dd-button:hover {
+	background: #1E282C;
+	color: white;
+}
+
+
+.dd-input {
+  display: none;
+}
+
+.dd-menu {
+  /*add following 4 lines on mini-version and make .dd-input:hover ---------------------------------- */
+  position: absolute;
+  left: 63px;
+  z-index: 9999;
+  
+  
+  padding: 0;
+  margin: 2px 0 0 0;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+  list-style-type: none;
+}
+
+/* checked means click. hover is on hover*/
+.dd-input:hover + .dd-menu {
+  display: block;
+} 
+
+
+
+
+/*Initial display set to none*/
+.dd-input + .dd-menu {
+  display: none;
+} 
+
+
+/*Menu styling*/
+.dd-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+
+}
+
+.dd-menu li a {
+  background: #2C3B41;
+	border-left: 4px solid transparent;
+  display: block;
+  margin: -10px -20px;
+  padding: 10px 20px;
+  color: white;
+}
+
+
+.dd-menu li a:hover {
+  border-left: 4px solid #3498db;
+  background-color: #1E282C;
+}
+
+.dd-menu li.divider{
+  padding: 0;
+  border-bottom: 1px solid  #1E282C;
+}
+
 ul {
 	list-style: none;
 	margin: 0;
   padding: 0;
- 
-}
-ul li {
-  /* Sub Menu */
- 
-}
-ul li a {
-	display: block;
-  background: #222D32;
-  padding: 10px 15px;
-  font-size: 20px;
-	color: whitesmoke;
-	text-decoration: none;
-	-webkit-transition: 0.2s linear;
-	-moz-transition: 0.2s linear;
-	-ms-transition: 0.2s linear;
-	-o-transition: 0.2s linear;
-	transition: 0.2s linear;
-}
-ul li a:hover {
-	background: #1E282C;
-	color: white;
-}
-ul li a .fa {
-	width: 16px;
-	text-align: center;
-  margin-right: 5px;
-  /* pos absolute and z-index*/
-  z-index: 1;
-  position: absolute;
-}
-ul ul {
-	background-color:#ebebeb;
 }
 
-/*Submenu CSS */
-ul li ul li a {
-	background: #2C3B41;
-	border-left: 4px solid transparent;
-  padding: 10px 40px;
-
-  /*To show up on mini-hover
-  z-index: 999;
-  position: absolute;*/
-  
+.dd-menu a {
+  text-decoration: none;
 }
 
-
-
-
-ul li ul li {
-    /*To show up on mini-hover*/
-    background: #2C3B41;
-
-}
-
-
-ul li ul li a:hover {
-  border-left: 4px solid #3498db;
-}
-
-#sidebar_menu li a span {
-  margin-left: 15px;
-}
-
-.hide_minimenu{
-  position: absolute;
-  bottom:20px;
-  font-size: 20px;
-  left: 50px;
-}
-
+/* End of lista col1*/
 .show {
   display: block;
 }
 
 .active{
   background: #1E282C;
+}
+
+.hide_minimenu{
+  position: absolute;
+  bottom:20px;
+  font-size: 20px;
+  left: 70px;
+}
+
+.textCenter{
+  text-align: center;
 }
