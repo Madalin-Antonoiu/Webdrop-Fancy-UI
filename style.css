@@ -43,6 +43,7 @@ body {
   margin-top: 0;
   padding-top: 0;
   padding: 5px;
+  z-index: 1;
 }
 
 #column3 {
@@ -128,6 +129,29 @@ nav #left_part span {
   /* Add transition here */
 }
 
+/*
+#sidebar_menu li .dd-button {
+  transition-timing-function: ease-out;
+  transition: all 0.5s;
+}*/
+
+
+/*Mini me text & icons */
+.displayNoneB {
+  display: block;
+  font-size: 9px;
+  transition-timing-function: ease;
+  transition: all 0.8s;
+}
+
+span#logotext.displayNoneB {
+  margin: auto;
+}
+
+a:active {
+  background: red;
+}
+
 
 
 /*Lista din col1 */
@@ -143,12 +167,11 @@ nav #left_part span {
 
 
 .dd-button {
-  border: 1px solid gray;
-  border-radius: 4px;
   cursor: pointer;
   padding: 10px 15px;
   font-size: 20px;
   color: #d2d6de;
+
 }
 
 .dd-button span {
@@ -172,7 +195,7 @@ nav #left_part span {
 */
 
 .dd-button:hover {
-  background: #1E282C;
+  background: #2C3B41;
   color: white;
 }
 
@@ -182,25 +205,28 @@ nav #left_part span {
   display: none;
 }
 
-/*add following 5 lines on mini-version and make .dd-input:hover ----------------------------------   */
-.dd-menu_mini {
+
+
+
+
+.dd-menu {
+  /*add following 5 lines on mini-version and make .dd-input:hover ----------------------------------   
   position: absolute;
   left: 63px;
   top: 44px;
   z-index: 99999;
   height: 95vh;
-}
-
-
-.dd-menu {
+*/
   padding: 0;
-  margin: 2px 0 0 0;
+
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0.8;
+  /* COuld remove, just for better view of underlist mini */
   list-style-type: none;
 }
 
 /* checked means click. hover is on hover*/
-.dd-input:checked + .dd-menu {
+.dd-input:checked+.dd-menu {
   display: block;
 }
 
@@ -218,6 +244,18 @@ nav #left_part span {
   padding: 10px 20px;
   cursor: pointer;
 
+}
+
+/*Will color hover all li a not current, i don;t like it 
+.selector:hover .dd-menu li a {
+  background: orangered;
+}
+*/
+
+/*Colors parent on li a hover - Works!*/
+.selector:hover .dd-button {
+
+  color: white;
 }
 
 .dd-menu li a {
@@ -264,37 +302,14 @@ ul {
   bottom: 20px;
   font-size: 20px;
   left: 70px;
+  z-index: 0;
 }
 
 .textCenter {
   text-align: center;
 }
 
-
-
-/*Tooltip on mini-version 
-.tooltip {
-  position: static;
-  display: block;
-  border-bottom: 1px dotted black;
+label.dropdown:checked {
+  background: red;
+  color: red;
 }
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  height: 100px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  margin-left: -30px;
-  margin-top: 5px;
-
-  position: absolute;
-  z-index: 99999999;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-} */

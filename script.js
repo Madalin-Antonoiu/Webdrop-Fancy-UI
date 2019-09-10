@@ -76,7 +76,7 @@ function columnOne() {
 
   //Hides all text
   document.querySelectorAll("#sidebar_menu li .dd-button span").forEach(function (el) {
-    el.classList.toggle('displayNone');
+    el.classList.toggle('displayNoneB');
   });
 
 
@@ -89,26 +89,13 @@ function columnOne() {
     el.classList.toggle('textCenter');
   });
 
-  //From big menu to mini-hover menu
+  //From big menu to mini-hover menu - need the two stylesheet - working! 
 
-  //Get the primary stylesheet
-  var sheet = document.styleSheets[0];
-
-
-  //Adds hover rule - works
-  sheet.insertRule('.dd-input:hover + .dd-menu {display: block}', 0);
-
-  //Searches trough whole list and removes it - works
-  for (i = 0; i < sheet.rules.length; i++) {
-    if (sheet.rules[i].selectorText == ".dd-input:checked + .dd-menu") { //spaces and everything sensitive
-      sheet.deleteRule(i);
-    }
+  //Known bug- need to add tooltip on this stating hovered element :)
+  var el = document.getElementById("style1");
+  if (el.href.match("empty.css")) {
+    el.href = "minime.css";
+  } else {
+    el.href = "empty.css";
   }
-
-  //Like a confirmation
-  console.log(sheet);
-
-
-  
-
 }
