@@ -10,24 +10,28 @@ var i;
 
 //don't need any css :)
 for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function() {
-  this.classList.toggle("active");
-  var dropdownContent = this.nextElementSibling;
-  if (dropdownContent.style.display === "block") {
-  dropdownContent.style.display = "none";
-  } else {
-  dropdownContent.style.display = "block";
+  dropdown[i].addEventListener("click", clickToShow);
+  
+  function clickToShow(){
+    this.classList.toggle("active"); //shows diff. bg color
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+    } else {
+    dropdownContent.style.display = "block";
+    }
   }
-  });
-}
+
+};
+
 // w3school - https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav_dropdown
 
 
 
-//Selects ALL ul inside sub-menu and start them as hidden by default
+/* Selects ALL ul inside sub-menu and start them as hidden by default -- DONE IN CSS NOW
 document.querySelectorAll(".sub-menu ul").forEach(function(el) {
   el.style.display = 'none'
-});
+}); */ 
 
 //1. Click a to show respective list
 //2. Hover a in mini state to make them hover :)
@@ -39,9 +43,12 @@ function dropDown(e){
 
 //Doesn't work when in mini-state, needs some tweaking, in normal, works!
 function hide_minimenu(){
+  nav1.style.display = 'none';
+  nav2.style.width = '100%';
 
   col1.style.display = 'none';
   col2.style.width = '87%';
+
 }
 
 /* 
@@ -55,7 +62,6 @@ function clickMe (e) {
 
 //Mini-Drawer
 function columnOne() {
-
   col1.classList.toggle('column1_mini');
   col2.classList.toggle('column2_expand');
 
@@ -69,17 +75,21 @@ function columnOne() {
   //});
 
   //Hides all text
-  document.querySelectorAll("#sidebar_menu li a span").forEach(function(el) {
+  document.querySelectorAll("#sidebar_menu li .dd-button span").forEach(function(el) {
     el.classList.toggle('displayNone'); 
   });
 
-  //Hides all submenus
-  //Known bug- Doesn't remove .active class
-  document.querySelectorAll(".sub-menu ul").forEach(function(el) {
-    el.style.display = 'none'
+  
+  col1.style.display = 'inline-block';
+
+  //Hide mini-menus on click - need to write this
+
+  document.querySelectorAll(".centerme").forEach(function(el) {
+    el.classList.toggle('textCenter'); 
   });
 
-  col1.style.display = 'inline-block';
+
+
 
 }
 
