@@ -59,7 +59,7 @@ function columnOne() {
   col1.classList.toggle('column1_mini');
   col2.classList.toggle('column2_expand');
 
-  nav1.classList.toggle('column1_contract');
+  nav1.classList.toggle('column1_mini');
   nav2.classList.toggle('column2_extend');
   logotext.classList.toggle('displayNone'); //Logo text hidden
 
@@ -82,4 +82,8 @@ function columnOne() {
   col1.style.display = 'inline-block';
 
 }
+
+
+
+
 

@@ -17,7 +17,7 @@ body {
 
 #column1 {
   height: 95vh;
-  width: 13%;
+  width: 10%;
   min-width: 11.5em;
   /*Just so, when condensed, and resize windo, doesn't go nuts*/
   outline: 2px solid green;
@@ -36,8 +36,7 @@ body {
 
 #column2 {
   height: 95vh;
-
-  width: 74%;
+  width: 77%;
   min-width: 9.5em;
   outline: 2px solid orange;
   outline-offset: -2px;
@@ -50,7 +49,6 @@ body {
 
 #column3 {
   height: 95vh;
-
   width: 13%;
   min-width: 9.5em;
   outline: 2px solid brown;
@@ -62,24 +60,20 @@ body {
 }
 
 .column1_mini {
-  width: 5% !important;
+  width: 3% !important;
   min-width: 4em !important;
   transition: all 0.75s;
 }
 
 .column2_expand {
-  width: 82% !important;
+  width: 84% !important;
   transition: all 0.75s;
 }
 
-.column1_contract {
-  width: 5% !important;
-  min-width: 4em !important;
-  transition: all 0.75s;
-}
+
 
 .column2_extend {
-  width: 95% !important;
+  width: 97% !important;
   transition: all 0.75s;
 }
 
@@ -94,7 +88,7 @@ nav {
 }
 
 nav #left_part {
-  width: 13%;
+  width: 10%;
   min-width: 11.5em;
   height: 5vh;
   outline: 2px solid gray;
@@ -106,7 +100,7 @@ nav #rest_of_it {
   float: left;
   outline: 2px solid gainsboro;
   outline-offset: -2px;
-  width: 87%;
+  width: 90%;
   min-width: 9.5em;
   z-index: 1;
   background: #3C8DBC;
@@ -118,9 +112,9 @@ nav #rest_of_it i {
 }
 
 nav #left_part i {
-  padding: 12px;
+  padding: 12px 21px 12px 18px;
   font-size: 22px;
-  margin-left: 15px;
+  
   display: inline-block;
   color: orange;
 }
@@ -179,11 +173,26 @@ ul ul {
 ul li ul li a {
 	background: #2C3B41;
 	border-left: 4px solid transparent;
-	padding: 10px 20px;
+  padding: 10px 40px;
+
+  /*To show up on mini-hover
+  z-index: 999;
+  position: absolute;*/
+  
 }
+
+
+
+
+ul li ul li {
+    /*To show up on mini-hover*/
+    background: #2C3B41;
+
+}
+
+
 ul li ul li a:hover {
-	
-	border-left: 4px solid #3498db;
+  border-left: 4px solid #3498db;
 }
 
 #sidebar_menu li a span {
