@@ -11,14 +11,14 @@ var i;
 //don't need any css :)
 for (i = 0; i < dropdown.length; i++) {
   dropdown[i].addEventListener("click", clickToShow);
-  
-  function clickToShow(){
+
+  function clickToShow() {
     this.classList.toggle("active"); //shows diff. bg color
     var dropdownContent = this.nextElementSibling;
     if (dropdownContent.style.display === "block") {
-    dropdownContent.style.display = "none";
+      dropdownContent.style.display = "none";
     } else {
-    dropdownContent.style.display = "block";
+      dropdownContent.style.display = "block";
     }
   }
 
@@ -31,18 +31,18 @@ for (i = 0; i < dropdown.length; i++) {
 /* Selects ALL ul inside sub-menu and start them as hidden by default -- DONE IN CSS NOW
 document.querySelectorAll(".sub-menu ul").forEach(function(el) {
   el.style.display = 'none'
-}); */ 
+}); */
 
 //1. Click a to show respective list
 //2. Hover a in mini state to make them hover :)
 
 
-function dropDown(e){
+function dropDown(e) {
   e.target.classList.toggle("show");
 }
 
 //Doesn't work when in mini-state, needs some tweaking, in normal, works!
-function hide_minimenu(){
+function hide_minimenu() {
   nav1.style.display = 'none';
   nav2.style.width = '100%';
 
@@ -71,47 +71,44 @@ function columnOne() {
 
   //Opens all dropdowns
   //document.querySelectorAll(".sub-menu ul").forEach(function(el) {
-    //el.style.display = 'block'
+  //el.style.display = 'block'
   //});
 
   //Hides all text
-  document.querySelectorAll("#sidebar_menu li .dd-button span").forEach(function(el) {
-    el.classList.toggle('displayNone'); 
+  document.querySelectorAll("#sidebar_menu li .dd-button span").forEach(function (el) {
+    el.classList.toggle('displayNone');
   });
 
-  
+
   col1.style.display = 'inline-block';
 
   //Hide mini-menus on click - need to write this
 
   //Center all icons
-  document.querySelectorAll(".centerme").forEach(function(el) {
-    el.classList.toggle('textCenter'); 
+  document.querySelectorAll(".centerme").forEach(function (el) {
+    el.classList.toggle('textCenter');
   });
 
   //From big menu to mini-hover menu
+
+  //Get the primary stylesheet
+  var sheet = document.styleSheets[0];
+
+
+  //Adds hover rule - works
+  sheet.insertRule('.dd-input:hover + .dd-menu {display: block}', 0);
+
+  //Searches trough whole list and removes it - works
+  for (i = 0; i < sheet.rules.length; i++) {
+    if (sheet.rules[i].selectorText == ".dd-input:checked + .dd-menu") { //spaces and everything sensitive
+      sheet.deleteRule(i);
+    }
+  }
+
+  //Like a confirmation
+  console.log(sheet);
+
+
   
-  /*Remove*/
-    var sheetRef = document.styleSheets[0];/*index of the sheet in the markup head el */
 
-  for (i=0; i<sheetRef.rules.length; i++){
-  if (sheetRef.rules[i].selectorText != ".dd-input:hover+.dd-menu {display:block} "){
-    sheetRef.insertRule(i);
-  } 
 }
-
-  /*Works to add a rule
-  document.styleSheets[0].insertRule('.dd-input:hover + .dd-menu {display: block}', 0);
-  */
-
-
- 
-}
-
-
-
-
-
-
-
-

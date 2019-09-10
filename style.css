@@ -16,11 +16,11 @@ body {
 }
 
 #column1 {
-  height: 95vh;
+  height: 94vh;
   width: 10%;
   min-width: 11.5em;
   /*Just so, when condensed, and resize windo, doesn't go nuts*/
-  outline: 2px solid green; 
+  outline: 2px solid green;
   outline-offset: -2px;
   color: white;
   margin-top: 0;
@@ -34,7 +34,7 @@ body {
 }
 
 #column2 {
-  height: 95vh;
+  height: 94vh;
   width: 77%;
   min-width: 9.5em;
   outline: 2px solid orange;
@@ -46,7 +46,7 @@ body {
 }
 
 #column3 {
-  height: 95vh;
+  height: 94vh;
   width: 13%;
   min-width: 9.5em;
   outline: 2px solid brown;
@@ -77,7 +77,7 @@ body {
 }
 
 nav {
-  height: 5vh;
+  height: 6vh;
   width: 100%;
   background: #3c8dbc;
 
@@ -90,7 +90,7 @@ nav #left_part {
   display: block !important;
   width: 10%;
   min-width: 11.5em;
-  height: 5vh;
+  height: 6vh;
   outline: 2px solid gray;
   outline-offset: -2px;
   float: left;
@@ -104,7 +104,7 @@ nav #rest_of_it {
   min-width: 9.5em;
   z-index: 1;
   background: #3C8DBC;
-  height: 5vh;
+  height: 6vh;
 }
 
 nav #rest_of_it i {
@@ -114,7 +114,7 @@ nav #rest_of_it i {
 nav #left_part i {
   padding: 12px 21px 12px 18px;
   font-size: 22px;
-  
+
   display: inline-block;
   color: orange;
 }
@@ -148,7 +148,7 @@ nav #left_part span {
   cursor: pointer;
   padding: 10px 15px;
   font-size: 20px;
-	color: #d2d6de;
+  color: #d2d6de;
 }
 
 .dd-button span {
@@ -172,8 +172,8 @@ nav #left_part span {
 */
 
 .dd-button:hover {
-	background: #1E282C;
-	color: white;
+  background: #1E282C;
+  color: white;
 }
 
 
@@ -182,8 +182,8 @@ nav #left_part span {
   display: none;
 }
 
- /*add following 5 lines on mini-version and make .dd-input:hover ----------------------------------   */
-.dd-menu_mini{
+/*add following 5 lines on mini-version and make .dd-input:hover ----------------------------------   */
+.dd-menu_mini {
   position: absolute;
   left: 63px;
   top: 44px;
@@ -195,22 +195,22 @@ nav #left_part span {
 .dd-menu {
   padding: 0;
   margin: 2px 0 0 0;
-  box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
   list-style-type: none;
 }
 
 /* checked means click. hover is on hover*/
 .dd-input:checked + .dd-menu {
   display: block;
-} 
+}
 
 
 
 
 /*Initial display set to none*/
-.dd-input + .dd-menu {
+.dd-input+.dd-menu {
   display: none;
-} 
+}
 
 
 /*Menu styling*/
@@ -222,7 +222,7 @@ nav #left_part span {
 
 .dd-menu li a {
   background: #2C3B41;
-	border-left: 4px solid transparent;
+  border-left: 4px solid transparent;
   display: block;
   margin: -10px -20px;
   padding: 10px 20px;
@@ -235,14 +235,14 @@ nav #left_part span {
   background-color: #1E282C;
 }
 
-.dd-menu li.divider{
+.dd-menu li.divider {
   padding: 0;
-  border-bottom: 1px solid  #1E282C;
+  border-bottom: 1px solid #1E282C;
 }
 
 ul {
-	list-style: none;
-	margin: 0;
+  list-style: none;
+  margin: 0;
   padding: 0;
 }
 
@@ -255,18 +255,18 @@ ul {
   display: block;
 }
 
-.active{
+.active {
   background: #1E282C;
 }
 
-.hide_minimenu{
+.hide_minimenu {
   position: absolute;
-  bottom:20px;
+  bottom: 20px;
   font-size: 20px;
   left: 70px;
 }
 
-.textCenter{
+.textCenter {
   text-align: center;
 }
 
