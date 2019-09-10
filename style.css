@@ -31,7 +31,6 @@ body {
   overflow-x: hidden;
   /*Vertical scrollbar - only if items go out of vh*/
   /*Horizontal scroll - never */
- 
 }
 
 #column2 {
@@ -44,7 +43,6 @@ body {
   margin-top: 0;
   padding-top: 0;
   padding: 5px;
-  z-index: 2; /* }{}{*/
 }
 
 #column3 {
@@ -134,10 +132,7 @@ nav #left_part span {
 
 /*Lista din col1 */
 
-/*1. Incepe cu mini-listele inchise*/
-.sub-menu ul {
-  display: none;
-}
+
 
 .dropdown {
   display: inline-block;
@@ -182,17 +177,22 @@ nav #left_part span {
 }
 
 
+
 .dd-input {
   display: none;
 }
 
-.dd-menu {
-  /*add following 4 lines on mini-version and make .dd-input:hover ---------------------------------- */
+ /*add following 5 lines on mini-version and make .dd-input:hover ----------------------------------   */
+.dd-menu_mini{
   position: absolute;
   left: 63px;
-  z-index: 9999;
-  
-  
+  top: 44px;
+  z-index: 99999;
+  height: 95vh;
+}
+
+
+.dd-menu {
   padding: 0;
   margin: 2px 0 0 0;
   box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
@@ -200,7 +200,7 @@ nav #left_part span {
 }
 
 /* checked means click. hover is on hover*/
-.dd-input:hover + .dd-menu {
+.dd-input:checked + .dd-menu {
   display: block;
 } 
 
@@ -269,3 +269,32 @@ ul {
 .textCenter{
   text-align: center;
 }
+
+
+
+/*Tooltip on mini-version 
+.tooltip {
+  position: static;
+  display: block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  height: 100px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  margin-left: -30px;
+  margin-top: 5px;
+
+  position: absolute;
+  z-index: 99999999;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+} */

@@ -84,14 +84,32 @@ function columnOne() {
 
   //Hide mini-menus on click - need to write this
 
+  //Center all icons
   document.querySelectorAll(".centerme").forEach(function(el) {
     el.classList.toggle('textCenter'); 
   });
 
+  //From big menu to mini-hover menu
+  
+  /*Remove*/
+    var sheetRef = document.styleSheets[0];/*index of the sheet in the markup head el */
 
-
-
+  for (i=0; i<sheetRef.rules.length; i++){
+  if (sheetRef.rules[i].selectorText != ".dd-input:hover+.dd-menu {display:block} "){
+    sheetRef.insertRule(i);
+  } 
 }
+
+  /*Works to add a rule
+  document.styleSheets[0].insertRule('.dd-input:hover + .dd-menu {display: block}', 0);
+  */
+
+
+ 
+}
+
+
+
 
 
 
