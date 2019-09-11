@@ -60,18 +60,6 @@
     min-width: 4em !important;
     transition: all 0.6s;
   }
-  .column2_expand {
-    width: 100%;
-    transition: width 0s;
-  }
-  .column2_extend {
-    width: 97% !important;
-    transition: width 0s;
-  }
-  .column2_full {
-    width: 100% !important;
-    transition: width 0s;
-  }
   nav {
     height: 5vh;
     min-height: 39px;

@@ -1,19 +1,15 @@
 //____Layout UI JAVASCRIPT____
   col1 = document.getElementById('column1');
-  col2 = document.getElementById('column2');
   col3 = document.getElementById('column3');
   nav1 = document.getElementById('left_part');
   nav2 = document.getElementById('rest_of_it');
 
   function hide_leftmenu() {
     col1.classList.toggle('displayNone');
-    col2.classList.toggle('column2_expand');
     nav1.classList.toggle('displayNone');
-    nav2.classList.toggle('column2_full');
   }
   function hide_rightmenu() {
     col3.classList.toggle('displayNone')
-    col2.classList.toggle('column2_expand')
   }
   //Mini-Drawer-Burger
   function columnOne() {
@@ -21,10 +17,8 @@
 
     //Extend-minify
     col1.classList.toggle('column1_mini');
-    col2.classList.toggle('column2_expand');
     nav1.classList.toggle('column1_mini');
-    nav2.classList.toggle('column2_extend');
-
+    
     //For when hide left panel button is used and want to show again from burger
     col1.classList.remove('displayNone');
     nav1.classList.remove('displayNone');
@@ -53,6 +47,7 @@
   //Preview Eye
   function preview() {
     nav = document.getElementById('myNav');
+    col2 = document.getElementById('column2');
 
     col1.classList.toggle('displayNoneSuper');
     col2.classList.toggle('fullheight');
