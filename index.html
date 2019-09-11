@@ -20,7 +20,15 @@
         <i class="fas fa-tint"><span id="logotext">Webdrop</span></i>
       </div>
       <div id="rest_of_it">
-        <i onclick="columnOne()" class="fas fa-bars"></i>
+        <i id="burger" onclick="columnOne()" class="fas fa-bars"></i>
+        <i onclick="hide_leftmenu()" class="fas fa-chevron-left hide_minimenu"
+          >Left</i
+        >
+        <i
+          onclick="hide_rightmenu()"
+          class="fas fa-chevron-right hide_rightmenu"
+          >Right</i
+        >
       </div>
     </nav>
 
@@ -133,12 +141,6 @@
         </ul>
 
         <!--End of snippet-->
-
-        <!--Hide mini-menu entirely-->
-        <i
-          onclick="hide_minimenu()"
-          class="fas fa-chevron-left hide_minimenu"
-        ></i>
       </div>
 
       <div id="column2" style="background-color:#bbb;">

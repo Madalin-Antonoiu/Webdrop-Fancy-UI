@@ -1,6 +1,8 @@
 col1 = document.getElementById('column1');
 col2 = document.getElementById('column2');
-logotext = document.getElementById('logotext');
+col3 = document.getElementById('column3');
+
+
 nav1 = document.getElementById('left_part');
 nav2 = document.getElementById('rest_of_it');
 
@@ -42,13 +44,24 @@ function dropDown(e) {
 }
 
 //Doesn't work when in mini-state, needs some tweaking, in normal, works!
-function hide_minimenu() {
-  nav1.style.display = 'none';
-  nav2.style.width = '100%';
+function hide_leftmenu() {
+  //burger = document.getElementById('burger');
+  //burger.classList.toggle('displayNone');
 
-  col1.style.display = 'none';
-  col2.style.width = '87%';
+  col1.classList.toggle('displayNone');
+  col2.classList.toggle('column2_expand');
 
+  nav1.classList.toggle('displayNone');
+  nav2.classList.toggle('column2_full');
+
+
+
+}
+
+function hide_rightmenu() {
+
+  col3.classList.toggle('displayNone')
+  col2.classList.toggle('column2_expand')
 }
 
 /* 
@@ -62,25 +75,32 @@ function clickMe (e) {
 
 //Mini-Drawer
 function columnOne() {
+  logotext = document.getElementById('logotext');
+  //Extend-contract
   col1.classList.toggle('column1_mini');
   col2.classList.toggle('column2_expand');
-
   nav1.classList.toggle('column1_mini');
   nav2.classList.toggle('column2_extend');
+
+  //For when hide left panel button is used and want to show again from burger
+  col1.classList.remove('displayNone');
+  nav1.classList.remove('displayNone');
+
+  //Hide Logo text
   logotext.classList.toggle('displayNone'); //Logo text hidden
 
-  //Opens all dropdowns
-  //document.querySelectorAll(".sub-menu ul").forEach(function(el) {
-  //el.style.display = 'block'
-  //});
+
 
   //Hides all text
   document.querySelectorAll("#sidebar_menu li .dd-button span").forEach(function (el) {
     el.classList.toggle('displayNoneB');
   });
 
-
-  col1.style.display = 'inline-block';
+  //Opens all dropdowns
+  //document.querySelectorAll(".sub-menu ul").forEach(function(el) {
+  //el.style.display = 'block'
+  //});
+  //col1.style.display = 'inline-block';
 
   //Hide mini-menus on click - need to write this
 

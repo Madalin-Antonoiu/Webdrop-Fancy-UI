@@ -33,9 +33,10 @@ body {
   /*Horizontal scroll - never */
 }
 
+/*Not 77, but 100, wether i hide other panels it stays fullscreen :) */
 #column2 {
   height: 94vh;
-  width: 77%;
+  width: 100%;
   min-width: 9.5em;
   outline: 2px solid orange;
   outline-offset: -2px;
@@ -59,22 +60,27 @@ body {
 }
 
 .column1_mini {
-  display: block !important;
   width: 3% !important;
   min-width: 4em !important;
-  transition: all 0.75s;
+  transition: all 0.6s;
 }
 
+/*Must be 97 in case col3 hidden + mini-menu*/
 .column2_expand {
-  width: 84% !important;
-  transition: all 0.75s;
+  width: 100%;
+  transition: width 0s;
 }
 
 
 
 .column2_extend {
   width: 97% !important;
-  transition: all 0.75s;
+  transition: width 0s;
+}
+
+.column2_full {
+  width: 100% !important;
+  transition: width 0s;
 }
 
 nav {
@@ -87,8 +93,8 @@ nav {
   color: white;
 }
 
+/*!important on display might be good*/
 nav #left_part {
-  display: block !important;
   width: 10%;
   min-width: 11.5em;
   height: 6vh;
@@ -98,14 +104,14 @@ nav #left_part {
 }
 
 nav #rest_of_it {
-  float: left;
   outline: 2px solid gainsboro;
   outline-offset: -2px;
-  width: 90%;
+  width: 100%;
   min-width: 9.5em;
   z-index: 1;
   background: #3C8DBC;
   height: 6vh;
+  float: left;
 }
 
 nav #rest_of_it i {
@@ -141,7 +147,7 @@ nav #left_part span {
   display: block;
   font-size: 9px;
   transition-timing-function: ease;
-  transition: all 0.8s;
+  transition: all 0.4s;
 }
 
 span#logotext.displayNoneB {
@@ -297,12 +303,26 @@ ul {
   background: #1E282C;
 }
 
+#burger {
+  cursor: pointer;
+}
+
 .hide_minimenu {
+  cursor: pointer;
   position: absolute;
-  bottom: 20px;
-  font-size: 20px;
-  left: 70px;
-  z-index: 0;
+  font-size: 15px;
+  right: 105px;
+  z-index: 999;
+  opacity: 0.6;
+}
+
+.hide_rightmenu {
+  cursor: pointer;
+  position: absolute;
+  font-size: 15px;
+  right: 5px;
+  z-index: 99999;
+  opacity: 0.6;
 }
 
 .textCenter {
