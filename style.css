@@ -140,6 +140,10 @@ nav #left_part span {
   /* Add transition here */
 }
 
+.displayNoneSuper{
+  display: none !important;
+}
+
 /*
 #sidebar_menu li .dd-button {
   transition-timing-function: ease-out;

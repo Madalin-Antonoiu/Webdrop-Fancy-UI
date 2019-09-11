@@ -83,8 +83,8 @@ function columnOne() {
 function preview() {
   nav = document.getElementById('myNav');
 
-  col1.classList.toggle('displayNone');
-  col3.classList.toggle('displayNone');
+  col1.classList.toggle('displayNoneSuper');
+  col3.classList.toggle('displayNoneSuper');
   col2.classList.toggle('fullheight');
-  nav.classList.toggle('displayNone');
+  nav.classList.toggle('displayNoneSuper');
 }
