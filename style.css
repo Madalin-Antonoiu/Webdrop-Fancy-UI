@@ -16,7 +16,7 @@ body {
 }
 
 #column1 {
-  height: 94vh;
+  height: 95vh;
   width: 10%;
   min-width: 11.5em;
   /*Just so, when condensed, and resize windo, doesn't go nuts*/
@@ -35,7 +35,7 @@ body {
 
 /*Not 77, but 100, wether i hide other panels it stays fullscreen :) */
 #column2 {
-  height: 94vh;
+  height: 95vh;
   width: 100%;
   min-width: 9.5em;
   outline: 2px solid orange;
@@ -48,7 +48,7 @@ body {
 }
 
 #column3 {
-  height: 94vh;
+  height: 95vh;
   width: 12%;
   min-width: 9.5em;
   outline: 2px solid brown;
@@ -84,7 +84,7 @@ body {
 }
 
 nav {
-  height: 6vh;
+  height: 5vh;
   min-height: 39px;
   width: 100%;
   background: #3c8dbc;
@@ -99,7 +99,7 @@ nav #left_part {
   width: 10%;
   min-width: 11.5em;
   min-height: 39px;
-  height: 6vh;
+  height: 5vh;
   outline: 2px solid gray;
   outline-offset: -2px;
   float: left;
@@ -112,7 +112,7 @@ nav #rest_of_it {
   min-width: 9.5em;
   z-index: 1;
   background: #3C8DBC;
-  height: 6vh;
+  height: 5vh;
   min-height: 39px;
   float: left;
 }

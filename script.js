@@ -29,54 +29,24 @@ for (i = 0; i < dropdown.length; i++) {
 // w3school - https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav_dropdown
 
 
-
-/* Selects ALL ul inside sub-menu and start them as hidden by default -- DONE IN CSS NOW
-document.querySelectorAll(".sub-menu ul").forEach(function(el) {
-  el.style.display = 'none'
-}); */
-
-//1. Click a to show respective list
-//2. Hover a in mini state to make them hover :)
-
-
-function dropDown(e) {
-  e.target.classList.toggle("show");
-}
-
-//Doesn't work when in mini-state, needs some tweaking, in normal, works!
 function hide_leftmenu() {
-  //burger = document.getElementById('burger');
-  //burger.classList.toggle('displayNone');
-
   col1.classList.toggle('displayNone');
   col2.classList.toggle('column2_expand');
-
   nav1.classList.toggle('displayNone');
   nav2.classList.toggle('column2_full');
-
-
-
 }
 
 function hide_rightmenu() {
-
   col3.classList.toggle('displayNone')
   col2.classList.toggle('column2_expand')
 }
 
-/* 
-var sidemenu = document.getElementById('sidebar_menu');
-
-sidemenu.addEventListener('click', clickMe, false);
-
-function clickMe (e) {
-  e.target.classList.display= 'block';
-} */
 
 //Mini-Drawer
 function columnOne() {
   logotext = document.getElementById('logotext');
-  //Extend-contract
+
+  //Extend-minify
   col1.classList.toggle('column1_mini');
   col2.classList.toggle('column2_expand');
   nav1.classList.toggle('column1_mini');
@@ -89,20 +59,10 @@ function columnOne() {
   //Hide Logo text
   logotext.classList.toggle('displayNone'); //Logo text hidden
 
-
-
   //Hides all text
   document.querySelectorAll("#sidebar_menu li .dd-button span").forEach(function (el) {
     el.classList.toggle('displayNoneB');
   });
-
-  //Opens all dropdowns
-  //document.querySelectorAll(".sub-menu ul").forEach(function(el) {
-  //el.style.display = 'block'
-  //});
-  //col1.style.display = 'inline-block';
-
-  //Hide mini-menus on click - need to write this
 
   //Center all icons
   document.querySelectorAll(".centerme").forEach(function (el) {
@@ -110,20 +70,16 @@ function columnOne() {
   });
 
   //From big menu to mini-hover menu - need the two stylesheet - working! 
-
-  //Known bug- need to add tooltip on this stating hovered element :)
   var el = document.getElementById("style1");
   if (el.href.match("empty.css")) {
     el.href = "minime.css";
   } else {
     el.href = "empty.css";
   }
-}
-
-function themator() {
 
 }
 
+//Preview Eye
 function preview() {
   nav = document.getElementById('myNav');
 
