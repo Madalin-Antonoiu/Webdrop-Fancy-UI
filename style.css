@@ -85,6 +85,7 @@ body {
 
 nav {
   height: 6vh;
+  min-height: 39px;
   width: 100%;
   background: #3c8dbc;
 
@@ -97,6 +98,7 @@ nav {
 nav #left_part {
   width: 10%;
   min-width: 11.5em;
+  min-height: 39px;
   height: 6vh;
   outline: 2px solid gray;
   outline-offset: -2px;
@@ -111,6 +113,7 @@ nav #rest_of_it {
   z-index: 1;
   background: #3C8DBC;
   height: 6vh;
+  min-height: 39px;
   float: left;
 }
 
