@@ -31,6 +31,7 @@ body {
   overflow-x: hidden;
   /*Vertical scrollbar - only if items go out of vh*/
   /*Horizontal scroll - never */
+  background: #222D32;
 }
 
 /*Not 77, but 100, wether i hide other panels it stays fullscreen :) */
@@ -57,6 +58,7 @@ body {
   margin-top: 0;
   padding-top: 0;
   padding: 5px;
+  background: #222D32;
 }
 
 .column1_mini {
