@@ -120,6 +120,15 @@ function columnOne() {
   }
 }
 
-function themator(){
-  
+function themator() {
+
+}
+
+function preview() {
+  nav = document.getElementById('myNav');
+
+  col1.classList.toggle('displayNone');
+  col3.classList.toggle('displayNone');
+  col2.classList.toggle('fullheight');
+  nav.classList.toggle('displayNone');
 }

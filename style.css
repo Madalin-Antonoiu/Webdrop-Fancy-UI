@@ -333,3 +333,18 @@ label.dropdown:checked {
   background: red;
   color: red;
 }
+
+
+
+i.previ_ew {
+  font-size: 20px;
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  color: orangered;
+  z-index: 99999;
+}
+
+.fullheight {
+  height: 100vh !important;
+}
